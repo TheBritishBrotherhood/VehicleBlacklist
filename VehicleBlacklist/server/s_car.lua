@@ -21,7 +21,7 @@ AddEventHandler("s_RemoveAllWeapons", function()
     if user then
       if ( user.permission_level == 0 ) and (db.driver == "mysql") then
         MySQL:executeQuery("DELETE FROM user_weapons WHERE identifier='@identifier'", { ['@identifier'] = identifier})
-          elseif ( user.permission_level == 0 ) then
+          elseif ( user.permission_level == 0 ) and (db.driver == "none") then
             TriggerClientEvent("c_RemWeap", source)
         end
       end
