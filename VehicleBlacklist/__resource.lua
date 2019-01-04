@@ -7,5 +7,5 @@ client_script {
 server_scripts {
   '@mysql-async/lib/MySQL.lua',
   'config/config_db.lua',
-  'server/server.lua'
+  'server/s_car.lua'
 }
